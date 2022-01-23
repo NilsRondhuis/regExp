@@ -72,3 +72,39 @@
 // + == {1,}
 // ? == {0,1}
 // * == {0,}
+
+// 9. Жадность и лень
+// console.log('I "write" or "know" JS'.match(/".+?"/g));
+
+// 10. Групы захвата () не обязательно
+// console.log(/(go)+/.test('go to home, go to weekend, go to turkey'));
+// console.log('Sulimovsky Bohdan'.replace(/(\w+) (\w+)/, '$2 $1'));
+// меняет по индексу
+
+// 11. Или OR |
+// console.log(/html|js|css/.test('i love js'));
+
+
+// Примеры
+// Все кроме пробелов
+// const input = '  g   ';
+// console.log(/\S/.test(input));
+
+// Убрать пробелы из строки, но есть еще метод trim()
+// const input = '   I write js!  ';
+// console.log(
+//     input.replace(/^\s+|\s+$/g, '')
+// );
+
+// Удалить пробелы внутри
+// const input = 'I    write    js!';
+// console.log(
+//     input.replace(/\s+/g, ' ')
+// );
+
+// Проверка url 
+// const checkUrl = 'https://webelart.com';
+// console.log(/^http(s)?:\/\//g.test(checkUrl));
+// пример с групой захвата то что в ней не обязательно
+// и экранирование слешов (экранируют когда нужно ставить
+// например . а не символ, будет так \.)
